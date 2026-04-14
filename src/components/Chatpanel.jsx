@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import { auth, db } from '../services/firebase'
 import { onAuthStateChanged } from 'firebase/auth'
 import { collection, addDoc, onSnapshot, query, orderBy, updateDoc, doc, getDoc, setDoc } from 'firebase/firestore'
-import send_message from '../../src/assets/icons/send.png'
-import arrow from '../../src/assets/icons/arrow-white.png'
+import send_message from '../assets/icons/send.png'
+import arrow from '../assets/icons/arrow-white.png'
 import '../styles/Chatpanel.css'
 
 export default function Chatpanel({ user, setSelectedUser }) {

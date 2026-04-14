@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { auth, db } from '../services/firebase'
 import { doc, getDoc, updateDoc, setDoc, deleteDoc } from 'firebase/firestore'
-import PEN_BLACK from '../../src/assets/icons/pen-black.png'
-import CLOSE_WHITE from '../../src/assets/icons/close-white.png'
+import PEN_BLACK from '../assets/icons/pen-black.png'
+import CLOSE_WHITE from '../assets/icons/close-white.png'
 import '../styles/Editprofile.css'
 
 export default function EditProfile() {

@@ -1,12 +1,12 @@
-import React, { createContext, useContext, useState } from 'react'
-import { db } from '../../src/services/firebase'
-import { auth } from '../../src/services/firebase'
+import React, { useState } from 'react'
+import { db } from '../services/firebase'
+import { auth } from '../services/firebase'
 import { collection, doc, getDoc, getDocs, query, setDoc, where } from 'firebase/firestore'
 import { useNavigate } from 'react-router-dom'
 import { setLoginStatus, clearLoginStatus } from '../features/login/loginSlice'
 import { useDispatch } from 'react-redux'
 import TermsAndConditions from '../components/TermsAndConditions'
-import ECHOLOGO from '../../src/assets/icons/ECHO.png'
+import ECHOLOGO from '../assets/icons/ECHO.png'
 import '../styles/Userinfo.css'
 
 export default function UserInfo() {

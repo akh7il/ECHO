@@ -3,7 +3,7 @@ import { auth } from '../../src/services/firebase'
 import { createUserWithEmailAndPassword, sendEmailVerification, signInWithEmailAndPassword } from 'firebase/auth'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import ECHOLOGO from '../../src/assets/icons/ECHO.png'
+import ECHOLOGO from '../assets/icons/ECHO.png'
 import "../styles/Login.css"
 
 export default function Login() {

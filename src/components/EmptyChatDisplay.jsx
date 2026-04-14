@@ -1,5 +1,5 @@
 import React from 'react'
-import ECHO_LOGO from '../../src/assets/icons/ECHO.png'
+import ECHO_LOGO from '../assets/icons/ECHO.png'
 import '../styles/Emptychatdisplay.css'
 
 export default function EmptyChatDisplay() {

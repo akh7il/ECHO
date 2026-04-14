@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import { auth, db } from '../services/firebase'
 import { doc, getDoc } from 'firebase/firestore'
 import { onAuthStateChanged, signOut } from 'firebase/auth'
-import USER from '../../src/assets/icons/user.png'
-import CLOSE_WHITE from '../../src/assets/icons/close-white.png'
+import USER from '../assets/icons/user.png'
+import CLOSE_WHITE from '../assets/icons/close-white.png'
 import '../styles/Profile.css'
 
 export default function Profile() {

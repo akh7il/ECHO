@@ -1,8 +1,8 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import ECHO_LOGo from '../../src/assets/icons/ECHO.png'
-import BINOCULAR_WHITE from '../../src/assets/icons/binoculars-white.png'
-import MENU from '../../src/assets/icons/menu-white.png'
+import ECHO_LOGo from '../assets/icons/ECHO.png'
+import BINOCULAR_WHITE from '../assets/icons/binoculars-white.png'
+import MENU from '../assets/icons/menu-white.png'
 import '../styles/Header.css'
 
 export default function Header() {

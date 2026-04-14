@@ -4,8 +4,8 @@ import { collection, getDocs, query, where } from 'firebase/firestore'
 import { auth, db } from '../services/firebase'
 import ChatItem from './ChatItem'
 import EmptyRecentChats from './EmptyRecentChats'
-import search from '../../src/assets/icons/search.png'
-import CLOSE_WHITE from '../../src/assets/icons/close-white.png'
+import search from '../assets/icons/search.png'
+import CLOSE_WHITE from '../assets/icons/close-white.png'
 import '../styles/Searchuser.css'
 
 export default function SearchUser() {

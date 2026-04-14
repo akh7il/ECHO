@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import ECHOLOGO from '../../src/assets/icons/ECHO.png'
+import ECHOLOGO from '../assets/icons/ECHO.png'
 import '../styles/Splash.css'
 
 export default function Splash() {
