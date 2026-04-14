@@ -1,6 +1,6 @@
 import React from 'react'
 import ECHO_LOGO from '../../src/assets/icons/ECHO.png'
-import '../../src/styles/Emptyrecentchats.css'
+import '../styles/Emptyrecentchats.css'
 
 export default function EmptyRecentChats() {
   return (

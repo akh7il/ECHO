@@ -5,7 +5,7 @@ import { doc, getDoc } from 'firebase/firestore'
 import { onAuthStateChanged, signOut } from 'firebase/auth'
 import USER from '../../src/assets/icons/user.png'
 import CLOSE_WHITE from '../../src/assets/icons/close-white.png'
-import '../../src/styles/Profile.css'
+import '../styles/Profile.css'
 
 export default function Profile() {
   const [user, setUser] = useState({})

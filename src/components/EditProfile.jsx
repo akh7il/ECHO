@@ -4,7 +4,7 @@ import { auth, db } from '../services/firebase'
 import { doc, getDoc, updateDoc, setDoc, deleteDoc } from 'firebase/firestore'
 import PEN_BLACK from '../../src/assets/icons/pen-black.png'
 import CLOSE_WHITE from '../../src/assets/icons/close-white.png'
-import '../../src/styles/Editprofile.css'
+import '../styles/Editprofile.css'
 
 export default function EditProfile() {
     const navigate = useNavigate()

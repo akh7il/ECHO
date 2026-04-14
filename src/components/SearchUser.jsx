@@ -6,7 +6,7 @@ import ChatItem from './ChatItem'
 import EmptyRecentChats from './EmptyRecentChats'
 import search from '../../src/assets/icons/search.png'
 import CLOSE_WHITE from '../../src/assets/icons/close-white.png'
-import '../../src/styles/Searchuser.css'
+import '../styles/Searchuser.css'
 
 export default function SearchUser() {
   const navigate = useNavigate()

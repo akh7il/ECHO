@@ -4,7 +4,7 @@ import { createUserWithEmailAndPassword, sendEmailVerification, signInWithEmailA
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import ECHOLOGO from '../../src/assets/icons/ECHO.png'
-import "../../src/styles/Login.css"
+import "../styles/Login.css"
 
 export default function Login() {
   const [email, setEmail] = useState("")

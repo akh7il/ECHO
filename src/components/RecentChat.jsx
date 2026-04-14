@@ -4,7 +4,7 @@ import { collection, query, where, onSnapshot } from 'firebase/firestore'
 import { onAuthStateChanged } from 'firebase/auth'
 import { useNavigate } from 'react-router-dom'
 import ChatItem from './ChatItem'
-import '../../src/styles/Recentchat.css'
+import '../styles/Recentchat.css'
 
 export default function RecentChat() {
   const navigate = useNavigate()

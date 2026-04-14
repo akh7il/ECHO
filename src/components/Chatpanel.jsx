@@ -5,7 +5,7 @@ import { onAuthStateChanged } from 'firebase/auth'
 import { collection, addDoc, onSnapshot, query, orderBy, updateDoc, doc, getDoc, setDoc } from 'firebase/firestore'
 import send_message from '../../src/assets/icons/send.png'
 import arrow from '../../src/assets/icons/arrow-white.png'
-import '../../src/styles/Chatpanel.css'
+import '../styles/Chatpanel.css'
 
 export default function Chatpanel({ user, setSelectedUser }) {
   const navigate = useNavigate()

@@ -3,8 +3,8 @@ import { Outlet, useNavigate } from 'react-router-dom'
 import EmptyChatDisplay from '../components/EmptyChatDisplay'
 import Chatpanel from '../components/Chatpanel'
 import Header from '../components/Header'
-import '../../src/styles/Home.css'
-import '../../src/styles/App.css'
+import '../styles/Home.css'
+import '../styles/App.css'
 
 export default function Home() {
   const navigate = useNavigate()

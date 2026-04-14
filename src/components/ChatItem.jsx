@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useOutletContext } from 'react-router-dom'
 import { doc, getDoc, onSnapshot } from 'firebase/firestore'
 import { auth, db } from '../services/firebase'
-import '../../src/styles/Chatitem.css'
+import '../styles/Chatitem.css'
 
 export default function ChatItem({ chatId, user, existingChat }) {
   const [chatUser, setChatUser] = useState(null)

@@ -7,7 +7,7 @@ import { setLoginStatus, clearLoginStatus } from '../features/login/loginSlice'
 import { useDispatch } from 'react-redux'
 import TermsAndConditions from '../components/TermsAndConditions'
 import ECHOLOGO from '../../src/assets/icons/ECHO.png'
-import '../../src/styles/Userinfo.css'
+import '../styles/Userinfo.css'
 
 export default function UserInfo() {
   const [formData, setFormData] = useState({
