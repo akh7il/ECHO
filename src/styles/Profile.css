@@ -1,0 +1,128 @@
+.profile-container {
+    width: 38%;
+    width: 350px;
+    height: 100%;
+    flex-shrink: 0;
+    background-color: #091413;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.profile-container-head {
+    width: 100%;
+    font-family: "Tanker";
+    font-size: 2rem;
+    font-style: normal;
+    color: #FBF6F6;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.profile-close {
+    height: 15px;
+    width: auto;
+    cursor: pointer;
+}
+
+.profile-container-body {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-info {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.username {
+    width: 130px;
+    height: 130px;
+    border: 0;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Tanker";
+    font-size: 4.5rem;
+    font-weight: 100;
+    font-style: normal;
+    color: #FBF6F6;
+    background-color: #ff00a2;
+}
+
+.user-info-name {
+    font-family: "Rajdhani";
+    font-weight: 500;
+    font-size: 1.3rem;
+    font-style: normal;
+    color: #FBF6F6;
+    text-transform: capitalize;
+    margin-top: 10px;
+}
+
+.user-info-username {
+    font-family: 'Khand';
+    font-size: .9rem;
+    font-weight: 100;
+    font-style: normal;
+    color: #eaeaea;
+    letter-spacing: .5px;
+    text-transform: lowercase;
+}
+
+.profile-btns {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.btns {
+    min-width: 40%;
+    max-width: 200px;
+    height: auto;
+    border: 0;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-family: 'Tanker';
+    font-size: 1rem;
+    background-color: #FBF6F6;
+    color: #091413;
+    cursor: pointer;
+    transition: all linear .1s;
+}
+
+.btns:hover {
+    background-color: #ff00a2;
+    color: #FBF6F6;
+}
+
+.username img {
+    height: 75%;
+}
+
+@media (max-width:992px) {
+    .profile-container {
+        width: 100%;
+    }
+}

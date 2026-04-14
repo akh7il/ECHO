@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.userinfo-container {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.userinfo-container-logo-section,
+.userinfo-container-input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+.userinfo-echo-logo {
+    width: 230px;
+}
+
+.userinfo-echo {
+    color: #F5059E;
+    font-family: "BoxerPunch";
+    font-size: 2rem;
+    font-weight: 100;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.userinfo {
+    width: 300px;
+    height: 35px;
+    border: 0;
+    background: black;
+    border-bottom: 3px solid #F5059E;
+    padding-left: 20px;
+    color: #F5059E;
+    font-family: "arial";
+    font-weight: 600;
+    text-transform: none;
+    font-size: 1.1rem;
+}
+
+.userinfo:focus {
+    outline: none;
+}
+
+.userinfo::placeholder {
+    font-family: "Google Sans Code", monospace;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: .9rem;
+    color: #F5059E;
+    opacity: 0.7;
+}
+
+.select-gender {
+    color: #F5059E;
+    font-family: "Google Sans Code", monospace;
+    font-weight: 700;
+    font-size: .9rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+input[type="date"] {
+    color-scheme: dark;
+    text-transform: uppercase;
+}
+
+.agree {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(245, 5, 158, 1);
+    font-family: "Google Sans Code", monospace;
+    font-size: 0.75rem;
+    width: 100%;
+    justify-content: space-between;
+    text-transform: capitalize;
+}
+
+.terms {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.terms span {
+    cursor: pointer;
+}
+
+.agree input {
+    accent-color: #F5059E;
+    cursor: pointer;
+}
+
+.userinfo-container-input-section {
+    gap: 15px;
+}
+
+.userinfo-submit {
+    width: 300px;
+    padding: 15px;
+    border: 0;
+    border-radius: 5px;
+    background: #F5059E;
+    color: #fff;
+    font-family: "Google Sans Code", monospace;
+    font-weight: 700;
+    font-size: .9rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.error {
+    width: 100%;
+    color: #ffffff;
+    text-align: justify;
+    font-family: "Google Sans Code", monospace;
+    font-weight: 700;
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+.TermsAndCondition {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 95vh;
+    max-width: 500px;
+    min-width: 300px;
+    width: 90%;
+    border: 0;
+    background-color: #a9006e;
+    border-radius: 10px;
+    overflow: auto;
+    scrollbar-width: none;
+    overflow-x: hidden;
+    overscroll-behavior-y: none;
+    scroll-behavior: smooth;
+    padding: 10px;
+}
+
+.show {
+    display: flex;
+}
+
+@media (min-width:568px) and (max-width:767px) {
+    .userinfo-container-logo-section {
+        width: 100%;
+    }
+
+    .userinfo-echo-logo {
+        width: 45%;
+        max-width: 350px;
+    }
+
+    .userinfo-echo {
+        font-size: 2.5rem;
+    }
+
+    .userinfo-container-input-section {
+        width: 350px;
+    }
+
+    .userinfo {
+        font-size: 1.2rem;
+    }
+
+    .userinfo,
+    .agree {
+        margin-bottom: 5px;
+    }
+
+    .userinfo,
+    .userinfo-submit {
+        width: 100%;
+    }
+
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    .userinfo-container-logo-section {
+        width: 100%;
+    }
+
+    .userinfo-echo-logo {
+        width: 45%;
+        max-width: 350px;
+    }
+
+    .userinfo-echo {
+        font-size: 3rem;
+    }
+
+    .userinfo-container-input-section {
+        width: 400px;
+    }
+
+    .userinfo {
+        font-size: 1.3rem;
+    }
+
+    .userinfo,
+    .userinfo-submit {
+        width: 100%;
+    }
+
+    .select-gender,
+    .userinfo::placeholder {
+        font-size: 1.2rem;
+    }
+
+    input[type="date"] {
+        font-size: 1.2rem;
+    }
+
+    .agree {
+        font-size: .9rem;
+    }
+
+    .userinfo-submit {
+        font-size: 1.2rem;
+    }
+
+    .userinfo,
+    .agree {
+        margin-bottom: 7px;
+    }
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+    .userinfo-container-logo-section {
+        width: 100%;
+    }
+
+    .userinfo-echo-logo {
+        width: 45%;
+        max-width: 460px;
+    }
+
+    .userinfo-echo {
+        font-size: 3.5rem;
+    }
+
+    .userinfo-container-input-section {
+        width: 450px;
+    }
+
+    .userinfo {
+        font-size: 1.6rem;
+    }
+
+    .userinfo,
+    .userinfo-submit {
+        width: 100%;
+    }
+
+    .select-gender,
+    .userinfo::placeholder {
+        font-size: 1.3rem;
+    }
+
+    input[type="date"] {
+        font-size: 1.3rem;
+    }
+
+    .agree {
+        font-size: 1rem;
+    }
+
+    .userinfo-submit {
+        font-size: 1.5rem;
+    }
+
+    .userinfo,
+    .agree {
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width:1200px) and (max-width:1399px) {
+    .userinfo-submit {
+        padding: 10px;
+    }
+}
+
+@media (min-width:1400px) {
+    .userinfo-echo-logo {
+        width: 25%;
+    }
+
+    .userinfo-echo {
+        font-size: 3rem;
+    }
+
+    .userinfo-container-input-section {
+        width: 450px;
+    }
+
+    .userinfo {
+        font-size: 1.6rem;
+    }
+
+    .userinfo,
+    .userinfo-submit {
+        width: 100%;
+    }
+
+    .select-gender,
+    .userinfo::placeholder {
+        font-size: 1.3rem;
+    }
+
+    input[type="date"] {
+        font-size: 1.3rem;
+    }
+
+    .agree {
+        font-size: 1rem;
+    }
+
+    .userinfo-submit {
+        font-size: 1.5rem;
+    }
+
+    .userinfo,
+    .agree {
+        margin-bottom: 10px;
+    }
+}

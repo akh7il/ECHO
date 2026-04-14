@@ -1,0 +1,319 @@
+* {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.welcomescreen-container {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../../src/assets/images/welcome-screen.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+}
+
+.welcome-title {
+    font-family: "molot";
+    font-size: 2rem;
+    font-weight: 500;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #FBF6F6;
+}
+
+.welcome-subtitle {
+    font-family: "WDXL Lubrifont JP N", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    font-style: normal;
+    text-transform: lowercase;
+    color: #FBF6F6;
+}
+
+.welcomescreen-container-top {
+    width: 90%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.welcomescreen-container-top-1,
+.welcomescreen-container-top-2,
+.welcomescreen-container-top-3 {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+}
+
+.welcomescreen-container-top-2 {
+    flex-direction: row-reverse;
+}
+
+.profile-circle-small-1,
+.profile-circle-small-2 {
+    height: 80px;
+    width: 80px;
+    border: 0;
+    border-radius: 50%;
+    background-image: url('../../src/assets/images/profile2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #898473;
+}
+
+.profile-circle-small-2 {
+    background-image: url('../../src/assets/images/profile3.png');
+}
+
+.chat-small {
+    height: 55%;
+    width: 35%;
+    background: #AACDC6;
+    border: 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-circle-large {
+    height: 90px;
+    width: 90px;
+    border: 0;
+    border-radius: 50%;
+    background-image: url('../../src/assets/images/profile1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #898473;
+}
+
+.chat-large {
+    height: 65%;
+    width: 40%;
+    background: #AACDC6;
+    border: 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-screen-button {
+    padding: 15px 150px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #000000;
+    color: #ffff;
+    text-transform: uppercase;
+    font-family: "molot";
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.welcome-screen-chats {
+    width: auto;
+    height: auto;
+    text-align: center;
+    font-family: "WDXL Lubrifont JP N", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    color: #013127;
+}
+
+@media (max-width:567px) {
+    .welcomescreen-container-top {
+        width: 95%;
+        height: 50%;
+        justify-content: space-evenly;
+    }
+
+    .profile-circle-small-1,
+    .profile-circle-small-2 {
+        height: 65px;
+        width: 65px;
+    }
+
+    .profile-circle-large {
+        height: 75px;
+        width: 75px;
+    }
+
+    .chat-small {
+        width: 70%;
+        height: 55%;
+    }
+
+    .chat-large {
+        width: 70%;
+        height: 60%;
+    }
+
+    .welcome-screen-button {
+        padding: 20px 0;
+        width: 95%;
+    }
+
+    .welcome-screen-chats {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width:568px) and (max-width:767px) {
+    .welcomescreen-container-top {
+        width: 95%;
+        height: 50%;
+        justify-content: space-evenly;
+    }
+
+    .welcome-title {
+        font-size: 2.5rem;
+    }
+
+    .welcome-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .profile-circle-small-1,
+    .profile-circle-small-2 {
+        height: 70px;
+        width: 70px;
+    }
+
+    .profile-circle-large {
+        height: 80px;
+        width: 80px;
+    }
+
+    .chat-small {
+        width: 70%;
+        height: 55%;
+    }
+
+    .chat-large {
+        width: 70%;
+        height: 60%;
+    }
+
+    .welcome-screen-button {
+        padding: 20px 0;
+        width: 95%;
+        font-size: 1.1rem;
+        font-weight: 400;
+    }
+
+    .welcome-screen-chats {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    .welcomescreen-container-top {
+        width: 95%;
+        height: 50%;
+        justify-content: space-evenly;
+        max-width: 760px;
+    }
+
+    .welcome-title {
+        font-size: 3rem;
+    }
+
+    .welcome-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .profile-circle-small-1,
+    .profile-circle-small-2 {
+        height: 75px;
+        width: 75px;
+    }
+
+    .profile-circle-large {
+        height: 85px;
+        width: 85px;
+    }
+
+    .chat-small {
+        width: 70%;
+        height: 55%;
+    }
+
+    .chat-large {
+        width: 70%;
+        height: 60%;
+    }
+
+    .welcome-screen-button {
+        padding: 20px 0;
+        width: 700px;
+        font-size: 1.1rem;
+        font-weight: 400;
+    }
+
+    .welcome-screen-chats {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width:992px) {
+    .welcomescreen-container-top {
+        width: 95%;
+        height: 60%;
+        justify-content: space-evenly;
+        max-width: 992px;
+    }
+
+    .welcome-title {
+        font-size: 2.5rem;
+    }
+
+    .welcome-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .profile-circle-small-1,
+    .profile-circle-small-2 {
+        height: 75px;
+        width: 75px;
+    }
+
+    .profile-circle-large {
+        height: 85px;
+        width: 85px;
+    }
+
+    .chat-small {
+        width: 35%;
+        height: 60%;
+    }
+
+    .chat-large {
+        width: 35%;
+        height: 60%;
+    }
+
+    .welcome-screen-button {
+        padding: 17px 0;
+        width: 500px;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+}

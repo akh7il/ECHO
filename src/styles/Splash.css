@@ -1,0 +1,29 @@
+* {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.splash-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    gap: 3%;
+}
+
+.echo-logo {
+    max-width: 350px;
+    width: 80%;
+}
+
+.echo {
+    color: #F5059E;
+    font-family: "BoxerPunch";
+    font-size: 4rem;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}

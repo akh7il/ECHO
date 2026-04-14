@@ -1,0 +1,361 @@
+.chat-panel-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-panel-container-head,
+.chat-panel-container-bottom {
+    width: 100%;
+    height: 13%;
+    flex-shrink: 0;
+}
+
+.chat-panel-container-chat-area {
+    width: 100%;
+    height: 74%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.chat-panel-container-head {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding: 0 20px;
+    border-bottom: 2px solid rgb(126, 126, 126);
+}
+
+.chat-panel-container-head-arrow {
+    height: 25%;
+    width: auto;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.chat-panel-container-head-user-details {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-profile {
+    width: 55px;
+    height: 55px;
+    border: 0;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    background-color: #e134a2;
+    color: #FBF6F6;
+    font-family: "tanker";
+    font-size: 2rem;
+    font-style: normal;
+}
+
+.chat-panel-container-head-user-info {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    justify-content: center;
+    align-items: start;
+    gap: 1px;
+}
+
+.chat-panel-container-head-user-info-username {
+    font-family: "arial";
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    color: #FBF6F6;
+    font-style: normal;
+}
+
+.chat-panel-container-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 2px solid rgb(126, 126, 126);
+}
+
+.enter-message-box {
+    width: 80%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 20px;
+    border: 0;
+    border-radius: 15px;
+    background-color: rgb(221, 214, 214);
+}
+
+.enter-message {
+    padding: 15px 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Rajdhani";
+    font-size: 1.1rem;
+    font-weight: 100;
+    resize: none;
+    background-color: transparent;
+    border: 0;
+}
+
+.enter-message::placeholder {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    font-family: "Rajdhani";
+    font-size: 1.1rem;
+    font-weight: 100;
+    color: #555454;
+}
+
+.send-message {
+    width: 50px;
+    height: 50px;
+    border: 0;
+    border-radius: 50%;
+    background-color: #e134a2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.send-message:hover {
+    background-color: #f9009e;
+}
+
+.send-icon {
+    height: 50%;
+    width: auto;
+}
+
+.enter-message:focus {
+    outline: none;
+}
+
+.messages {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.message-box {
+    min-width: 60%;
+    max-width: 60%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ff00a2;
+    border: 0;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+.message {
+    width: 80%;
+    height: auto;
+    font-family: 'Rajdhani';
+    font-size: 1.05rem;
+    font-style: normal;
+    color: #FBF6F6;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.message-time {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    font-family: 'Khand';
+    font-size: .9rem;
+    font-style: normal;
+    color: #f1f0f0;
+    padding: 10px;
+}
+
+.day {
+    text-transform: capitalize;
+}
+
+.sent {
+    justify-content: end;
+    min-height: 60px;
+    width: 100%;
+}
+
+.received {
+    justify-content: start;
+    min-height: 60px;
+}
+
+@media screen and (max-width: 992px) {
+    .chat-panel-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1000;
+        background-color: #262626;
+    }
+
+    .chat-panel-container-head {
+        height: 10%;
+        padding: 0 15px;
+    }
+
+    .chat-panel-container-head-arrow {
+        height: 20px;
+        width: 20px;
+    }
+
+    .user-profile {
+        width: 50px;
+        height: 50px;
+        font-size: 1.7rem;
+        margin-left: 10px;
+    }
+
+    .chat-panel-container-head-user-info-username {
+        font-size: 1.4rem;
+    }
+
+    .chat-panel-container-chat-area {
+        height: 76%;
+        padding: 15px;
+        gap: 8px;
+    }
+
+    .chat-panel-container-bottom {
+        height: 14%;
+        padding: 0 10px;
+        gap: 10px;
+    }
+
+    .enter-message-box {
+        width: 85%;
+        height: 55px;
+        padding: 0 15px;
+    }
+
+    .enter-message {
+        font-size: 1.1rem;
+    }
+
+    .send-message {
+        width: 50px;
+        height: 50px;
+    }
+
+    .message-box {
+        min-width: 60%;
+        max-width: 60%;
+    }
+
+    .message {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    .message-time {
+        padding: 8px;
+        font-size: 0.75rem;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 5px;
+    }
+
+    .day {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .chat-panel-container-head {
+        height: 12%;
+    }
+
+    .user-profile {
+        width: 50px;
+        height: 50px;
+        font-size: 1.6rem;
+    }
+
+    .chat-panel-container-head-user-info-username {
+        font-size: 1.4rem;
+    }
+
+    .chat-panel-container-chat-area {
+        height: 72%;
+        padding: 10px;
+    }
+
+    .chat-panel-container-bottom {
+        height: 16%;
+    }
+
+    .enter-message-box {
+        width: 80%;
+        height: 50px;
+        padding: 0 12px;
+    }
+
+    .enter-message {
+        font-size: 1rem;
+    }
+
+    .send-message {
+        width: 45px;
+        height: 45px;
+    }
+
+    .message-box {
+        min-width: 85%;
+        max-width: 85%;
+    }
+
+    .message {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .message-time {
+        padding: 6px;
+        font-size: 0.7rem;
+    }
+
+    .day {
+        font-size: 0.7rem;
+    }
+}

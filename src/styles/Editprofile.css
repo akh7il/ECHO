@@ -1,0 +1,152 @@
+.editprofile-container {
+    width: 350px;
+    height: 100%;
+    flex-shrink: 0;
+    background-color: #091413;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.editprofile-container-head {
+    width: 100%;
+    font-family: "Tanker";
+    font-size: 2rem;
+    font-style: normal;
+    color: #FBF6F6;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.close-profile {
+    height: 15px;
+    width: auto;
+    cursor: pointer;
+}
+
+.editprofile-container-body {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.editprofile-container-body-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1%;
+}
+
+.profile {
+    width: 120px;
+    height: 120px;
+    border: 0;
+    border-radius: 50%;
+    background-color: #ff00a2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: "Tanker";
+    font-size: 4rem;
+    color: #FBF6F6;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: visible;
+}
+
+.edit-profile-input {
+    width: 60%;
+    height: 35px;
+    border: 0;
+    background-color: transparent;
+    border-bottom: 3px solid #F5059E;
+    color: #F5059E;
+    font-family: "Rajdhani";
+    font-weight: 700;
+    text-transform: none;
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.edit-profile-input:focus {
+    outline: none;
+}
+
+.select option {
+    background-color: #091413;
+    cursor: pointer;
+}
+
+.save-profile {
+    min-width: 45%;
+    padding: 8px 0;
+    font-family: "Rajdhani";
+    font-size: 1.1rem;
+    font-style: normal;
+    border: 0;
+    border-radius: 5px;
+    background-color: #F5059E;
+    color: #FBF6F6;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.edit-profile-input::placeholder {
+    width: 100%;
+    text-align: center;
+}
+
+.edit-icon {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #F3F4F4;
+    padding: 3px;
+    border: 0;
+    border-radius: 50%;
+    bottom: -12px;
+    transition: all ease .5s;
+    cursor: pointer;
+}
+
+.edit-icon:hover {
+    transform: scale(1.2) rotate(360deg);
+}
+
+.edit-profile-buttons {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+small {
+    font-family: 'Rajdhani';
+    font-weight: 900;
+    font-size: .9rem;
+    width: 60%;
+    text-align: center;
+}
+
+.edit {
+    width: 60%;
+    padding: 10px 0;
+}
+
+@media (max-width:992px) {
+    .editprofile-container {
+        width: 100%;
+    }
+}

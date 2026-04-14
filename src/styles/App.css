@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "BoxerPunch";
+    src: url('../../src/assets/fonts/BoxerPunch.ttf');
+}
+
+@font-face {
+    font-family: "molot";
+    src: url('../../src/assets/fonts/Molot.otf');
+}
+
+@font-face {
+    font-family: "GalanticRegular";
+    src: url('../../src/assets/fonts/GalanticRegular.otf');
+}
+
+@font-face {
+    font-family: "panton";
+    src: url('../../src/assets/fonts/Panton.ttf');
+}
+
+@font-face {
+    font-family: "arial";
+    src: url('../../src/assets/fonts/arial.ttf');
+}
+
+@font-face {
+    font-family: "PilcrowRounded";
+    src: url('../../src/assets/fonts/PilcrowRounded.ttf');
+}
+
+@font-face {
+    font-family: "Tanker";
+    src: url('../../src/assets/fonts/Tanker.ttf');
+}
+
+@font-face {
+    font-family: "Alpino";
+    src: url('../../src/assets/fonts/Alpino.ttf');
+}
+
+@font-face {
+    font-family: "Plein";
+    src: url('../../src/assets/fonts/Plein.ttf');
+}
+
+@font-face {
+    font-family: "BebasNeue";
+    src: url('../../src/assets/fonts/BebasNeue.ttf');
+}
+
+@font-face {
+    font-family: "Rajdhani";
+    src: url('../../src/assets/fonts/Rajdhani.ttf');
+}
+
+@font-face {
+    font-family: "Khand";
+    src: url('../../src/assets/fonts/Khand.ttf');
+}
+
+@font-face {
+    font-family: "Bonny";
+    src: url('../../src/assets/fonts/Bonny.ttf');
+}
+
+@font-face {
+    font-family: "Bevellier";
+    src: url('../../src/assets/fonts/Bevellier.ttf');
+}

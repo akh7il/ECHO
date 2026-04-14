@@ -1,0 +1,253 @@
+* {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.login-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: black;
+}
+
+.login-container-inputs {
+    width: 300px;
+    height: 35px;
+    border: 0;
+    background-color: black;
+    border-bottom: 3px solid #F5059E;
+    padding-left: 20px;
+    color: #F5059E;
+    font-family: "Rajdhani";
+    font-weight: 700;
+    text-transform: none;
+    font-size: 1.1rem;
+}
+
+.login-container-inputs:focus {
+    outline: none;
+}
+
+.login-container-inputs::placeholder {
+    font-family: "Google Sans Code", monospace;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: .9rem;
+    color: #F5059E;
+    opacity: .7;
+}
+
+.login-page-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-echo-logo {
+    width: 230px;
+}
+
+.login-echo {
+    color: #F5059E;
+    font-family: "BoxerPunch";
+    font-size: 2rem;
+    font-weight: 100;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.input-container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.login-btn {
+    padding: 13px 0;
+    width: 300px;
+    border: 0;
+    background-color: #db058c;
+    border-radius: 5px;
+    color: #fff;
+    font-family: "Google Sans Code", monospace;
+    ;
+    font-size: 1rem;
+    font-weight: 800;
+    font-style: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #ff00a2;
+}
+
+.signin {
+    width: 100%;
+    color: #b8468e;
+    font-family: "Google Sans Code", monospace;
+    ;
+    font-size: .7rem;
+    font-weight: 800;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.signin span {
+    cursor: pointer;
+}
+
+.signin span:hover {
+    color: #c9007f;
+}
+
+.errors {
+    max-width: 300px;
+    width: 100%;
+    color: #ffffff;
+    font-family: "Google Sans Code", monospace;
+    ;
+    font-size: .7rem;
+    font-weight: 800;
+    font-style: normal;
+    text-transform: uppercase;
+    text-align: start;
+}
+
+@media (min-width:568px) and (max-width:767px) {
+    .login-page-logo-container {
+        width: 100%;
+    }
+
+    .login-echo-logo {
+        width: 45%;
+        max-width: 350px;
+    }
+
+    .login-echo {
+        font-size: 3rem;
+    }
+
+    .input-container {
+        width: 350px;
+    }
+
+    .login-container-inputs {
+        width: 100%;
+    }
+
+    .login-container-inputs::placeholder {
+        font-size: 1.1rem;
+    }
+
+    .signin {
+        font-size: .8rem;
+    }
+
+    .errors {
+        font-size: .8rem;
+    }
+
+    .login-btn {
+        width: 350px;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    .login-page-logo-container {
+        width: 100%;
+    }
+
+    .login-echo-logo {
+        width: 45%;
+        max-width: 350px;
+    }
+
+    .login-echo {
+        font-size: 3rem;
+    }
+
+    .input-container {
+        width: 350px;
+    }
+
+    .login-container-inputs {
+        width: 100%;
+    }
+
+    .login-container-inputs::placeholder {
+        font-size: 1.1rem;
+    }
+
+    .signin {
+        font-size: .8rem;
+    }
+
+    .errors {
+        font-size: .8rem;
+    }
+
+    .login-btn {
+        width: 350px;
+    }
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+    .login-page-logo-container {
+        width: 100%;
+    }
+
+    .login-echo-logo {
+        width: 45%;
+        max-width: 460px;
+    }
+
+    .login-echo {
+        font-size: 4rem;
+    }
+
+    .input-container {
+        width: 450px;
+    }
+
+    .login-container-inputs {
+        width: 100%;
+    }
+
+    .login-container-inputs::placeholder {
+        font-size: 1.3rem;
+    }
+
+    .signin {
+        font-size: .9rem;
+    }
+
+    .errors {
+        font-size: .8rem;
+    }
+
+    .login-btn {
+        width: 450px;
+        padding: 18px 0;
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width:1200px) {
+    .login-page-logo-container {
+        width: 100%;
+    }
+
+    .login-echo-logo {
+        width: 25%;
+        max-width: 320px;
+    }
+}

@@ -1,0 +1,116 @@
+.Chat-item-container {
+    width: 100%;
+    height: 13%;
+    min-height: 85px;
+    max-height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    background-color: #091413;
+    cursor: pointer;
+    padding-right: 5px;
+}
+
+.Chat-item-container:hover {
+    background-color: #3d3d3d;
+}
+
+.Chat-item-container-left {
+    height: 100%;
+    width: 25%;
+    min-width: 90px;
+    max-width: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.userprofile {
+    width: 70px;
+    height: 70px;
+    background-color: #ff00a2;
+    color: #FBF6F6;
+    border: 0;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: "tanker";
+    font-size: 2.5rem;
+    font-style: normal;
+}
+
+.Chat-item-container-right {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-bottom: 2px solid rgb(126, 126, 126);
+}
+
+.Chat-item-container-right-top {
+    width: 100%;
+    height: 40%;
+    color: #FBF6F6;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+.Chat-item-container-right-bottom {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    color: #FBF6F6;
+}
+
+.Chat-item-container-right-top-left {
+    font-family: "Panton";
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.Chat-item-container-right-top-right {
+    font-family: "Rajdhani";
+    font-size: .9rem;
+    font-weight: 100;
+}
+
+.Chat-item-container-right-bottom-left {
+    font-family: "Rajdhani";
+    font-size: 1rem;
+    font-weight: 900;
+    width: 75%;
+    height: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.Chat-item-container-right-bottom-right {
+    width: 22px;
+    height: 22px;
+    border: 0;
+    border-radius: 50%;
+    background-color: #ff00a2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: "Rajdhani";
+    font-size: 1rem;
+    font-style: normal;
+    padding: 5px;
+}
