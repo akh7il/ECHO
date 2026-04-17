@@ -249,7 +249,7 @@ input[type="date"] {
 
     .userinfo-echo-logo {
         width: 45%;
-        max-width: 460px;
+        max-width: 200px;
     }
 
     .userinfo-echo {
@@ -301,6 +301,7 @@ input[type="date"] {
 @media (min-width:1400px) {
     .userinfo-echo-logo {
         width: 25%;
+        width: 200px;
     }
 
     .userinfo-echo {
