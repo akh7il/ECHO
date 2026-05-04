@@ -1,20 +1,79 @@
-<<<<<<< HEAD
-# ECHO
-=======
-# React + Vite
+<h1 align="center"> <b>💬 ECHO — Real-Time Chat Application</b> </h1>
+<p align="center"> <b>⚡ Scalable • 🔐 Secure • 💬 Real-Time Communication Platform</b> </p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h2>📌 Overview</h2>
 
-Currently, two official plugins are available:
+ECHO is a production-ready real-time chat application built to demonstrate strong fundamentals in frontend engineering, real-time data handling, and scalable architecture.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+It enables users to communicate instantly with a seamless UI while maintaining high performance and secure authentication flows.
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<h2>🚀 Features</h2>
 
-## Expanding the ESLint configuration
+🔐 Authentication
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
->>>>>>> 65ce665 (INITIAL COMMIT)
+Firebase-based secure login & signup
+<br>
+Persistent sessions
+
+💬 Real-Time Messaging
+
+Instant message delivery using Firestore
+<br>
+No refresh required
+
+👥 User System
+Dynamic user data handling
+<br>
+Profile-based interaction
+
+📂 Chat Management
+
+Recent conversations tracking
+<br>
+Efficient data querying
+
+⚡ Responsive UI
+
+Mobile-first design
+<br>
+Smooth UX across devices
+
+
+<h2>Technical Highlights</h2>
+
+Architected a real-time messaging system using Firestore listeners
+<br>
+Built reusable component-based UI in React
+<br>
+Implemented efficient state management
+<br>
+Designed scalable folder structure for maintainability
+<br>
+Integrated secure authentication flow with Firebase Auth
+
+🛠️ Tech Stack
+<p align="center"> <img src="https://skillicons.dev/icons?i=react,firebase,js,css,html,git" /> </p>
+
+| Layer    | Technology                |
+| -------- | ------------------------- |
+| Frontend | React.js, JavaScript, CSS |
+| Backend  | Firebase Firestore        |
+| Auth     | Firebase Authentication   |
+| Routing  | React Router              |
+
+<h2>📁 Project Structure</h2>
+
+ECHO/
+│── src/
+│   ├── components/   
+│   ├── pages/   
+│   ├── services/ 
+│   ├── features/
+│   ├── styles/
+|   ├── assets/
+│   └── App.js
+│
+│── public/
+│── package.json
+│── README.md
