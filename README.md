@@ -63,17 +63,3 @@ Integrated secure authentication flow with Firebase Auth
 | Routing  | React Router              |
 
 <h2>📁 Project Structure</h2>
-
-ECHO/
-│── src/
-│   ├── components/   
-│   ├── pages/   
-│   ├── services/ 
-│   ├── features/
-│   ├── styles/
-|   ├── assets/
-│   └── App.js
-│
-│── public/
-│── package.json
-│── README.md
