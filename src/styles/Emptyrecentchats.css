@@ -12,6 +12,7 @@
  .Empty-recent-chats-container-echo-logo {
      width: 60%;
      height: auto;
+     max-width: 150px;
  }
 
  .Empty-recent-chats-message {
@@ -24,6 +25,18 @@
      font-style: normal;
      text-transform: lowercase;
      margin-top: 15px;
+ }
+
+ @media screen and (max-width: 480px) {
+     .Empty-recent-chats-container-echo-logo {
+         width: 50%;
+         max-width: 120px;
+     }
+
+     .Empty-recent-chats-message {
+         font-size: 0.8rem;
+         margin-top: 8px;
+     }
  }
 
  @media screen and (max-width: 992px) {
@@ -49,14 +62,10 @@
      }
  }
 
- @media screen and (max-width: 480px) {
-     .Empty-recent-chats-container-echo-logo {
-         width: 50%;
-         max-width: 120px;
-     }
-
-     .Empty-recent-chats-message {
-         font-size: 0.8rem;
-         margin-top: 8px;
+ @media screen and (min-width:993px) {
+     .Empty-recent-chats-container {
+         width: 100%;
+         min-width: 330px;
+         max-width: 330px;
      }
  }

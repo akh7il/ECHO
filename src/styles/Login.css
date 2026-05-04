@@ -199,54 +199,44 @@
     }
 }
 
-@media (min-width:992px) and (max-width:1199px) {
+@media (min-width:992px) {
     .login-page-logo-container {
         width: 100%;
     }
 
     .login-echo-logo {
         width: 45%;
-        max-width: 460px;
+        max-width: 200px;
     }
 
     .login-echo {
-        font-size: 4rem;
+        font-size: 2.5rem;
     }
 
     .input-container {
-        width: 450px;
+        max-width: 300px;
     }
 
     .login-container-inputs {
         width: 100%;
+        max-width: 300px;
     }
 
     .login-container-inputs::placeholder {
-        font-size: 1.3rem;
-    }
-
-    .signin {
         font-size: .9rem;
     }
 
+    .signin {
+        font-size: .7rem;
+    }
+
     .errors {
-        font-size: .8rem;
+        font-size: .7rem;
     }
 
     .login-btn {
-        width: 450px;
-        padding: 18px 0;
-        font-size: 1.3rem;
-    }
-}
-
-@media (min-width:1200px) {
-    .login-page-logo-container {
-        width: 100%;
-    }
-
-    .login-echo-logo {
-        width: 25%;
-        max-width: 200px;
+        max-width: 300px;
+        padding: 13px 0;
+        font-size: .9rem;
     }
 }

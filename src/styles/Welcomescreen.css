@@ -282,38 +282,45 @@
     }
 
     .welcome-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .welcome-subtitle {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .profile-circle-small-1,
     .profile-circle-small-2 {
-        height: 75px;
-        width: 75px;
+        height: 3.5rem;
+        width: 3.5rem;
     }
 
     .profile-circle-large {
-        height: 85px;
-        width: 85px;
+        height: 4rem;
+        width: 4rem;
     }
 
     .chat-small {
         width: 35%;
         height: 60%;
+        max-width: 300px;
     }
 
     .chat-large {
         width: 35%;
         height: 60%;
+        max-width: 300px;
     }
 
     .welcome-screen-button {
-        padding: 17px 0;
+        padding: 14px 0;
         width: 500px;
-        font-size: 1rem;
+        font-size: .8rem;
         font-weight: 400;
+        max-width: 400px;
+    }
+
+    .welcome-screen-chats {
+        font-size: 1rem;
     }
 }

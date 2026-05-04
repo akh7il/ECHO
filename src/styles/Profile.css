@@ -126,3 +126,15 @@
         width: 100%;
     }
 }
+
+@media screen and (min-width:993px) {
+    .profile-container {
+        width: 100%;
+        min-width: 330px;
+        max-width: 330px;
+    }
+
+    .profile-container-head {
+        font-size: 1.8rem;
+    }
+}

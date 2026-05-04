@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { db } from '../services/firebase'
 import { auth } from '../services/firebase'
 import { collection, doc, getDoc, getDocs, query, setDoc, where } from 'firebase/firestore'
@@ -325,13 +325,15 @@ export default function UserInfo() {
     })
     navigate("/home")
   }
-  const fromLogin = sessionStorage.getItem("fromLogin")
+  const fromLogin = JSON.parse(sessionStorage.getItem("fromLogin") || "false");
+
   useEffect(() => {
     if (!fromLogin) {
-      navigate("/login", { replace: true })
+      navigate("/login", { replace: true });
     }
-  }, [navigate, fromLogin])
-  if (!fromLogin) return null
+  }, [fromLogin, navigate]);
+
+  if (!fromLogin) return null;
 
   return (
     <div className='userinfo-container'>
@@ -357,7 +359,7 @@ export default function UserInfo() {
         {showerrors.dob && <p className='error'>{showerrors.dob}</p>}
         <label className="agree">email verification completed<input type="checkbox" name='emailVerification' checked={formData.emailVerification} onChange={setData} /></label>
         {showerrors.emailVerification && <p className='error'>{showerrors.emailVerification}</p>}
-        <label className="agree terms" onClick={() => setTerms(true)}> <span>agree terms and conditions</span><input type="checkbox" name='termsAndConditions' checked={formData.termsAndConditions} onChange={setData} /></label>
+        <label className="agree terms"><span onClick={() => setTerms(true)}>agree terms and conditions</span><input type="checkbox" name='termsAndConditions' checked={formData.termsAndConditions} onChange={setData} /></label>
         {showerrors.termsAndConditions && <p className='error'>{showerrors.termsAndConditions}</p>}
         <div className={`TermsAndCondition ${terms ? "show" : ""}`}><TermsAndConditions close={() => setTerms(false)} /></div>
         <button className='userinfo-submit' type='submit'>submit</button>

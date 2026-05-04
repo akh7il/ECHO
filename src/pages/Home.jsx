@@ -10,7 +10,7 @@ export default function Home() {
   const navigate = useNavigate()
   const [selectedUser, setSelectedUser] = useState(null)
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 992)
-  const fromLogin = sessionStorage.getItem("fromLogin")
+  const fromLogin = JSON.parse(sessionStorage.getItem("fromLogin") || "false")
   useEffect(() => {
     if (!fromLogin) {
       navigate("/login", { replace: true })

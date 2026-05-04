@@ -242,26 +242,28 @@ input[type="date"] {
     }
 }
 
-@media (min-width:992px) and (max-width:1199px) {
+@media (min-width:992px) {
     .userinfo-container-logo-section {
         width: 100%;
     }
 
     .userinfo-echo-logo {
         width: 45%;
-        max-width: 200px;
+        max-width: 170px;
     }
 
     .userinfo-echo {
-        font-size: 3.5rem;
+        font-size: 2rem;
     }
 
     .userinfo-container-input-section {
-        width: 450px;
+        max-width: 400px;
+        min-width: 320px;
+        gap: 0;
     }
 
     .userinfo {
-        font-size: 1.6rem;
+        font-size: 1rem;
     }
 
     .userinfo,
@@ -271,15 +273,15 @@ input[type="date"] {
 
     .select-gender,
     .userinfo::placeholder {
-        font-size: 1.3rem;
+        font-size: .9rem;
     }
 
     input[type="date"] {
-        font-size: 1.3rem;
+        font-size: .9rem;
     }
 
     .agree {
-        font-size: 1rem;
+        font-size: .7rem;
     }
 
     .userinfo-submit {
@@ -290,56 +292,13 @@ input[type="date"] {
     .agree {
         margin-bottom: 15px;
     }
-}
 
-@media (min-width:1200px) and (max-width:1399px) {
     .userinfo-submit {
+        font-size: 1rem;
         padding: 10px;
     }
-}
 
-@media (min-width:1400px) {
-    .userinfo-echo-logo {
-        width: 25%;
-        width: 200px;
-    }
-
-    .userinfo-echo {
-        font-size: 3rem;
-    }
-
-    .userinfo-container-input-section {
-        width: 450px;
-    }
-
-    .userinfo {
-        font-size: 1.6rem;
-    }
-
-    .userinfo,
-    .userinfo-submit {
-        width: 100%;
-    }
-
-    .select-gender,
-    .userinfo::placeholder {
-        font-size: 1.3rem;
-    }
-
-    input[type="date"] {
-        font-size: 1.3rem;
-    }
-
-    .agree {
-        font-size: 1rem;
-    }
-
-    .userinfo-submit {
-        font-size: 1.5rem;
-    }
-
-    .userinfo,
-    .agree {
-        margin-bottom: 10px;
+    .error {
+        font-size: .65rem;
     }
 }

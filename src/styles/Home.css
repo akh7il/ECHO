@@ -16,6 +16,12 @@
     flex-direction: row;
 }
 
+@media screen and (max-width: 480px) {
+    .chat-area {
+        height: calc(100vh - 50px);
+    }
+}
+
 @media screen and (max-width: 992px) {
     .Home-container {
         height: 100vh;
@@ -26,11 +32,5 @@
         height: calc(100vh - 60px);
         flex-direction: column;
         position: relative;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .chat-area {
-        height: calc(100vh - 50px);
     }
 }

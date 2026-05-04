@@ -36,7 +36,7 @@ export default function Login() {
           const userCredential = await createUserWithEmailAndPassword(auth, email, password)
           await sendEmailVerification(userCredential.user)
           sessionStorage.setItem("email", email)
-          sessionStorage.setItem("fromLogin", "true")
+          sessionStorage.setItem("fromLogin", JSON.stringify(true));
           navigate("/userinfo")
         }
         else {
@@ -74,6 +74,7 @@ export default function Login() {
         setPassword("")
         return
       }
+      sessionStorage.setItem("fromLogin", JSON.stringify(true));
       navigate("/home")
     }
     catch {
@@ -82,7 +83,7 @@ export default function Login() {
       setPassword("")
     }
   }
-  
+
   return (
     <div className='login-container'>
       <div className='login-page-logo-container'>

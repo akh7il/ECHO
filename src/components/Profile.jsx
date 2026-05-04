@@ -28,6 +28,13 @@ export default function Profile() {
     return () => unsubscribe()
   }, [navigate])
 
+  const fromLogin = JSON.parse(sessionStorage.getItem("fromLogin") || "false")
+  useEffect(() => {
+    if (!fromLogin) {
+      navigate("/login", { replace: true })
+    }
+  }, [navigate, fromLogin])
+
   const handleSignOut = async () => {
     await signOut(auth)
     navigate('/')

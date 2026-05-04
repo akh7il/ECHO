@@ -92,6 +92,34 @@
 
  }
 
+ @media screen and (max-width: 480px) {
+     .search-box {
+         width: 85%;
+         height: 50px;
+         font-size: 1.1rem;
+     }
+
+     .search-box::placeholder {
+         font-size: 1rem;
+     }
+
+     .search-box-icon {
+         width: 7%;
+         top: 19px;
+         left: 12%;
+     }
+
+     .close-search {
+         width: 5%;
+         min-width: 20px;
+     }
+
+     .no-user-found {
+         padding-top: 30px;
+         font-size: 0.9rem;
+     }
+ }
+
  @media screen and (max-width: 992px) {
      .Searchuser-container {
          max-width: 100%;
@@ -140,30 +168,14 @@
      }
  }
 
- @media screen and (max-width: 480px) {
-     .search-box {
-         width: 85%;
-         height: 50px;
-         font-size: 1.1rem;
-     }
-
-     .search-box::placeholder {
-         font-size: 1rem;
+ @media screen and (min-width:993px) {
+     .Searchuser-container {
+         min-width: 250px;
+         max-width: 330px;
      }
 
      .search-box-icon {
-         width: 7%;
-         top: 19px;
-         left: 12%;
-     }
-
-     .close-search {
-         width: 5%;
-         min-width: 20px;
-     }
-
-     .no-user-found {
-         padding-top: 30px;
-         font-size: 0.9rem;
+         width: 6.5%;
+         top: 25%;
      }
  }

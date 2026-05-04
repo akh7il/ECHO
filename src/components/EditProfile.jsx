@@ -32,10 +32,10 @@ export default function EditProfile() {
                 navigate('/')
                 return
             }
-            
+
             const userRef = doc(db, "USERS", currentUser.uid)
             const userSnap = await getDoc(userRef)
-            
+
             if (userSnap.exists()) {
                 const data = userSnap.data()
                 setUserData(data)
@@ -51,9 +51,16 @@ export default function EditProfile() {
             }
             setLoading(false)
         }
-        
+
         fetchUserData()
     }, [navigate])
+
+    const fromLogin = JSON.parse(sessionStorage.getItem("fromLogin") || "false")
+    useEffect(() => {
+        if (!fromLogin) {
+            navigate("/login", { replace: true })
+        }
+    }, [navigate, fromLogin])
 
     const calculateAge = (dobString) => {
         const birthDate = new Date(dobString)
@@ -68,25 +75,25 @@ export default function EditProfile() {
 
     const validateForm = () => {
         const newErrors = {}
-        
+
         if (!firstname.trim() || firstname.length < 3) {
             newErrors.firstname = "must be at least 3 characters"
             setErrors(newErrors)
             return false
         }
-        
+
         if (!secondname.trim() || secondname.length < 1) {
             newErrors.secondname = "must be at least 1 character"
             setErrors(newErrors)
             return false
         }
-        
+
         if (!gender) {
             newErrors.gender = "Please select a gender"
             setErrors(newErrors)
             return false
         }
-        
+
         if (dob) {
             const age = calculateAge(dob)
             if (age < 13) {
@@ -95,7 +102,7 @@ export default function EditProfile() {
                 return false
             }
         }
-        
+
         setErrors({})
         return true
     }
@@ -103,25 +110,25 @@ export default function EditProfile() {
     const checkUsername = async (e) => {
         const newUsername = e.target.value
         setUsername(newUsername)
-        
+
         if (newUsername === originalUsername) {
             setUsernameStatus("")
             setIsUsernameAvailable(true)
             return
         }
-        
+
         if (newUsername.trim() === "") {
             setUsernameStatus("")
             setIsUsernameAvailable(false)
             return
         }
-        
+
         setCheckingUsername(true)
         const cleanedUsername = newUsername.toLowerCase().trim()
         const usernameRef = doc(db, "USERNAMES", cleanedUsername)
         const snap = await getDoc(usernameRef)
         setCheckingUsername(false)
-        
+
         if (snap.exists()) {
             setUsernameStatus("this username is already taken")
             setIsUsernameAvailable(false)
@@ -148,31 +155,31 @@ export default function EditProfile() {
 
     const handleSave = async (e) => {
         e.preventDefault()
-        
+
         if (!validateForm()) {
             return
         }
-        
+
         if (!isUsernameAvailable && username !== originalUsername) {
             alert("Please choose a different username")
             return
         }
-        
+
         const currentUser = auth.currentUser
         if (!currentUser) return
-        
+
         const userRef = doc(db, "USERS", currentUser.uid)
-        
+
         if (username !== originalUsername && originalUsername) {
             const oldUsernameRef = doc(db, "USERNAMES", originalUsername.toLowerCase())
             await deleteDoc(oldUsernameRef)
-            
+
             const newUsernameRef = doc(db, "USERNAMES", username.toLowerCase())
-            await setDoc(newUsernameRef, { 
+            await setDoc(newUsernameRef, {
                 uid: currentUser.uid
             })
         }
-        
+
         await updateDoc(userRef, {
             username,
             firstname,
@@ -180,12 +187,12 @@ export default function EditProfile() {
             gender,
             dob
         })
-        
+
         setOriginalFirstname(firstname)
         setOriginalSecondname(secondname)
         setOriginalUsername(username)
         setIsEditing(false)
-        
+
         navigate('/home/profile')
     }
 
@@ -223,11 +230,11 @@ export default function EditProfile() {
                         {user_profile || "AK"}
                         <img src={PEN_BLACK} alt="pen" className='edit-icon' />
                     </div>
-                    
-                    <input 
-                        type="text" 
-                        className='edit-profile-input' 
-                        placeholder='username' 
+
+                    <input
+                        type="text"
+                        className='edit-profile-input'
+                        placeholder='username'
                         value={username}
                         onChange={checkUsername}
                         readOnly={!isEditing}
@@ -240,11 +247,11 @@ export default function EditProfile() {
                             {usernameStatus}
                         </small>
                     )}
-                    
-                    <input 
-                        type="text" 
-                        className='edit-profile-input' 
-                        placeholder='firstname' 
+
+                    <input
+                        type="text"
+                        className='edit-profile-input'
+                        placeholder='firstname'
                         value={firstname}
                         onChange={(e) => setFirstname(e.target.value)}
                         readOnly={!isEditing}
@@ -252,11 +259,11 @@ export default function EditProfile() {
                         style={inputStyle}
                     />
                     {errors.firstname && isEditing && <small style={{ color: "red" }}>{errors.firstname}</small>}
-                    
-                    <input 
-                        type="text" 
-                        className='edit-profile-input' 
-                        placeholder='secondname' 
+
+                    <input
+                        type="text"
+                        className='edit-profile-input'
+                        placeholder='secondname'
                         value={secondname}
                         onChange={(e) => setSecondname(e.target.value)}
                         readOnly={!isEditing}
@@ -264,19 +271,19 @@ export default function EditProfile() {
                         style={inputStyle}
                     />
                     {errors.secondname && isEditing && <small style={{ color: "red" }}>{errors.secondname}</small>}
-                    
-                    <input 
-                        type="email" 
-                        className='edit-profile-input' 
-                        placeholder='email' 
+
+                    <input
+                        type="email"
+                        className='edit-profile-input'
+                        placeholder='email'
                         value={email}
                         readOnly
                         disabled
                         style={{ cursor: "not-allowed" }}
                     />
-                    
-                    <select 
-                        className='edit-profile-input select' 
+
+                    <select
+                        className='edit-profile-input select'
                         value={gender}
                         onChange={(e) => setGender(e.target.value)}
                         disabled={!isEditing}
@@ -288,11 +295,11 @@ export default function EditProfile() {
                         <option value="other">Other</option>
                     </select>
                     {errors.gender && isEditing && <small style={{ color: "red" }}>{errors.gender}</small>}
-                    
-                    <input 
-                        type="date" 
-                        className='edit-profile-input' 
-                        placeholder='date of birth' 
+
+                    <input
+                        type="date"
+                        className='edit-profile-input'
+                        placeholder='date of birth'
                         value={dob}
                         onChange={handleDobChange}
                         readOnly={!isEditing}
@@ -300,7 +307,7 @@ export default function EditProfile() {
                         style={inputStyle}
                     />
                     {errors.dob && isEditing && <small style={{ color: "red" }}>{errors.dob}</small>}
-                    
+
                     {isEditing ? (
                         <div className='edit-profile-buttons'>
                             <button type="submit" className='save-profile'>save</button>
